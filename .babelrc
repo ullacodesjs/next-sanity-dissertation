@@ -1,0 +1,5 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [],
+  "exclude": ["node_modules/next/font/**/*"]
+}
