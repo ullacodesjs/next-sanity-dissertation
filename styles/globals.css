@@ -98,6 +98,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@font-face{
+  font-family: "";
+  ...
+}
+
 a {
   color: inherit;
   text-decoration: none;
