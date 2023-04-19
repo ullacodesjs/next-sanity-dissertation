@@ -20,11 +20,11 @@ export default defineType({
       title: 'NumReviews',
       type: 'number',
     }),
-    // defineField({
-    //   name: "category",
-    //   title: "Category",
-    //   type: "string",
-    // }),
+    defineField({
+      name: 'price',
+      title: 'Price',
+      type: 'number',
+    }),
     defineField({
       name: 'slug',
       title: 'Slug',

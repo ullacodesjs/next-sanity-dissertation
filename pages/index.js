@@ -14,7 +14,7 @@ const Home = ({ products, bannerData }) => {
       {/* <div className="py-3">
         {["Product 1", "Product 2"].map((product) => product)}
       </div> */}
-      <div>
+      <div className="text-center justify-center h-screen text-2xl">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
