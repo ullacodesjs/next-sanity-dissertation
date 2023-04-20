@@ -1,10 +1,16 @@
 import React from "react";
 import { AiFillInstagram } from "react-icons/ai";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="bg-blue-950 text-gray-200 py-4">
       <div className="container mx-auto">
+        <Link href="/Contact Information">Contact Information</Link>
+        <Link href="/Contact Information">Privacy Policy</Link>
+        <Link href="/Contact Information">Refund Policy</Link>
+        <Link href="/Contact Information">Shipping Policy</Link>
+        <Link href="/Contact Information">Terms of Service</Link>
         <p className="text-center justify-center">
           &copy; 2023 Fresh Aire by Ulla Angell 001005631-9. All Rights
           Reserved. COMP1682

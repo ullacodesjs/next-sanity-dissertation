@@ -10,8 +10,9 @@ const Product = ({ product: { image, name, slug, price, rating } }) => {
       <Link href={`/product/${slug.current}`}>
         <div className="cursor-pointer transform scale-100 transition-transform ease duration-500 text-gray-800 flex flex-wrap justify-center gap-15 mt-20 w-full  hover:transform ">
           <Image
+            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
             src="/assets/watch_1.webp"
-            alt="user profile picture"
+            alt="producttest"
             width={250}
             height={250}
           />

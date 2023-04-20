@@ -4,7 +4,19 @@ import { Product } from "../../components";
 // import { useStateContext } from "../../context/StateContext";
 
 const ProductDetails = ({ product, products }) => {
-  return <div>product</div>;
+  const { image, name, details, price } = product;
+  return (
+    <div>
+      <div className="flex flex-wrap gap-40 mx-40 mt-60 text-blue-900">
+        <div>
+          <div>
+            {/* <img src={urlFor(image && image[0])} /> */}
+            <img src={urlFor(product.image).width(200).url()} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -35,8 +47,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-
-  console.log(product);
 
   return {
     props: { products, product },

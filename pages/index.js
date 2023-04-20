@@ -7,8 +7,8 @@ import Link from "next/link";
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <Banner Banner={bannerData.length && bannerData[0]} />
-
+      <Banner />
+      {/* Banner={bannerData.length && bannerData[0]} */}
       <div>
         <h2 className="py-3 ">Latest Products</h2>
         <p className="py-3">New Season Designs For Every Home</p>
