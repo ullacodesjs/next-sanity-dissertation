@@ -1,19 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Product, HeroFeature, Footer } from "../components";
-import { client } from "../utils/sanity.client.js";
+import { Product, Banner, Footer } from "../components";
+import { client } from "../utils/client.js";
+import Link from "next/link";
 
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <HeroFeature heroFeature={bannerData.length && bannerData[0]} />
+      <Banner Banner={bannerData.length && bannerData[0]} />
+
       <div>
-        <h2 className="py-3 "> Latest Products</h2>
-        <p className="py-3">New Season Desigs For Every Home</p>
+        <h2 className="py-3 ">Latest Products</h2>
+        <p className="py-3">New Season Designs For Every Home</p>
       </div>
-      {/* <div className="py-3">
+      <div className="py-3">
         {["Product 1", "Product 2"].map((product) => product)}
-      </div> */}
+      </div>
       <div className="text-center justify-center h-screen text-2xl">
         {products?.map((product) => (
           <Product key={product._id} product={product} />

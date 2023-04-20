@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { client, urlFor } from "../../utils/sanity.client.js";
+import { client, urlFor } from "../../utils/client.js";
 import { Product } from "../../components";
 // import { useStateContext } from "../../context/StateContext";
 
