@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Banner = ({ Banner }) => {
   return (
-    <div className="bg-blue-950 text-gray-200 py-10 text-4xl mt-1">
+    <div className="bg-[#a69cac] text-gray-200 py-40 text-4xl mt-1 rounded-full">
       {/* <h2>{Banner.midText}</h2>
       <h1>{Banner.largeText1}</h1> */}
       {/* //renders the image for the feature on homepage */}

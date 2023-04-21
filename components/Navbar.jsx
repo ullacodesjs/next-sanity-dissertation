@@ -1,16 +1,28 @@
 import React from "react";
 import Link from "next/link";
 import { AiOutlineShopping } from "react-icons/ai";
+import { Cart } from "./";
+import { useStateContext } from "../context/StateContext";
+
 const Navbar = () => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
   return (
-    <div>
-      <p className="">
+    <div className="flex justify-between relative m-4 mx-18">
+      <p className="text-xl text-[#a69cac]">
         <Link href="/"> Fresh Aire</Link>
       </p>
-      <button type="button" onClick="">
+      <button
+        type="button"
+        className="text-[#474973] text-xl cursor-pointer relative transition-transform duration-400 border-none bg-transparent"
+        onClick={() => setShowCart(true)}
+      >
         <AiOutlineShopping />
-        <span className="">1</span>
+        <span className="absolute right-[-8px] text-xs text-white bg-[#161b33] w-[18px] h-[18px] rounded-full text-center font-semibold">
+          {totalQuantities}
+        </span>
       </button>
+      {showCart && <Cart />}
     </div>
   );
 };
