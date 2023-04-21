@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
-
+// colours: f5f4ef c8bb9e a2967f dedbd1 53524e cec3b2 f1f0eb
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
