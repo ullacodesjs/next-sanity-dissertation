@@ -37,7 +37,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
         <div className="styles">
           <h1>{name}</h1>
-          <div class="flex items-center mt-0 gap-5 content-evenly">
+          <div className="flex items-center mt-0 gap-5 content-evenly">
             <div>
               <AiFillStar />
               <AiFillStar />
@@ -53,22 +53,26 @@ const ProductDetails = ({ product, products }) => {
           <p>£{price}</p>
           <div className="text-base px-3 py-2  border border-gray-400 p-6">
             <p>
-              <span className="cursor-pointer" onClick="">
+              <span className="cursor-pointer" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="num" onClick="">
+              <span className="num" onClick={qty}>
                 0
               </span>
-              <span className="cursor-pointer" onClick="">
+              <span className="cursor-pointer" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
             </p>
           </div>
           <div className="button styles">
-            <button className="w-150 p-5" type="button" onClick="">
+            <button
+              className="w-150 p-5"
+              type="button"
+              onClick={() => onAdd(product, qty)}
+            >
               Add to cart
             </button>
-            <button className="w-150" type="button" onClick="">
+            <button className="w-150" type="button" onClick={handleBuyNow}>
               Buy now
             </button>
           </div>

@@ -10,7 +10,7 @@ const Home = ({ products, bannerData }) => {
       <Banner />
       {/* Banner={bannerData.length && bannerData[0]} */}
       <div>
-        <h2 className="py-3 ">Latest Products</h2>
+        <h2 className="py-3">Latest Products</h2>
         <p className="py-3">New Season Designs For Every Home</p>
       </div>
       <div className="py-3">
