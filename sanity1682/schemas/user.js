@@ -15,14 +15,14 @@ export default defineType({
       title: 'Email',
       type: 'string',
     }),
-    // defineField({
-    //   name: 'image',
-    //   title: 'Image',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: 'password',
       title: 'Password',

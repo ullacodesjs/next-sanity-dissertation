@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { HeadersAdapter } from "next/dist/server/web/spec-extension/adapters/headers";
 import ShoppingCart from "./ShoppingCart";
 // colours: f5f4ef c8bb9e a2967f dedbd1 53524e cec3b2 f1f0eb
 const Layout = ({ children }) => {
@@ -16,7 +15,9 @@ const Layout = ({ children }) => {
         <ShoppingCart />
       </header>
       <main className="max-w-7xl mx-auto w-full">{children}</main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
