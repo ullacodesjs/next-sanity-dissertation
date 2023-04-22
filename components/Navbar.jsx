@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link href="/"> Fresh Aire</Link>
       </p>
       <p className="text-[#a2967f] flex justify-between relative m-1 mx-18">
-        <Link href="/login"> Login In</Link>
+        <Link href="/login"> Login</Link>
       </p>
       <button
         type="button"
