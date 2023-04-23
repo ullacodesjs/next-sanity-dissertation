@@ -5,9 +5,9 @@ import Link from "next/link";
 // colours: f5f4ef c8bb9e a2967f dedbd1 53524e cec3b2 f1f0eb
 const Footer = () => {
   return (
-    <footer class="bg-[#f1f0eb] text-[#53524e] py-10 rounded-lg">
-      <div class="container mx-auto flex flex-col items-center justify-center">
-        <nav class="flex flex-col items-center justify-center gap-y-2">
+    <footer className="bg-[#f1f0eb] text-[#53524e] py-10 rounded-lg">
+      <div className="container mx-auto flex flex-col items-center justify-center">
+        <nav className="flex flex-col items-center justify-center gap-y-2">
           <ul>
             <li>
               <Link href="/privacy">Privacy Policy</Link>
@@ -26,12 +26,12 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        <p class="text-center">
+        <p className="text-center">
           &copy; 2023 (COMP1682) Fresh Aire by Ulla Angell 001005631-9. <br />
           All Rights Reserved.
         </p>
-        <div class="flex justify-center gap-4 mt-4">
-          <AiFillInstagram class="text-2xl text-gray-800" />
+        <div className="flex justify-center gap-4 mt-4">
+          <AiFillInstagram className="text-2xl text-gray-800" />
         </div>
       </div>
     </footer>

@@ -7,10 +7,12 @@ import {
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
+import { useStateContext } from "no/context/StateContext.js";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
+  const { decQty, incQty, qty, onAdd } = useStateContext();
   return (
     <div>
       <div className="flex flex-wrap">
@@ -24,7 +26,7 @@ const ProductDetails = ({ product, products }) => {
             />
           </div>
           <div className="flex gap-10 mt-20">
-            {/* {image?.map((item, i) => (
+            {image?.map((item, i) => (
               <img
                 key={i}
                 src={urlFor(item)}
@@ -33,7 +35,7 @@ const ProductDetails = ({ product, products }) => {
                 }
                 onMouseEnter={() => setIndex(i)}
               />
-            ))} */}
+            ))}
           </div>
         </div>
         <div>
@@ -53,13 +55,17 @@ const ProductDetails = ({ product, products }) => {
           <div class="flex items-center justify-start">
             <h4 class="text-lg font-medium mr-4">Quantity:</h4>
             <div class="flex items-center border border-gray-400 p-2 rounded-md">
-              <button class="focus:outline-none" onClick="decrementQuantity()">
+              <button class="focus:outline-none" onClick={decQty}>
                 <AiOutlineMinus class="w-6 h-6" />
               </button>
-              <span class="mx-4 text-lg font-medium" id="quantity">
+              <span
+                class="mx-4 text-lg font-medium"
+                id="quantity"
+                onClick={qty}
+              >
                 1
               </span>
-              <button class="focus:outline-none" onClick="incrementQuantity()">
+              <button class="focus:outline-none" onClick={incQty}>
                 <AiOutlinePlus class="w-6 h-6" />
               </button>
             </div>
@@ -68,7 +74,7 @@ const ProductDetails = ({ product, products }) => {
             <button
               type="button"
               className="py-2 px-4 border border-red-500 mt-40 text-lg font-medium bg-white text-red-500 rounded-md transition-transform transform hover:scale-105 mx-4"
-              onClick=""
+              onClick={() => onAdd(product, qty)}
             >
               Add to Cart
             </button>
