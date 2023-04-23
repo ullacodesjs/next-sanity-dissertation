@@ -12,7 +12,12 @@ import { useStateContext } from "no/context/StateContext.js";
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  };
   return (
     <div>
       <div className="flex flex-wrap">
@@ -81,7 +86,7 @@ const ProductDetails = ({ product, products }) => {
             <button
               type="button"
               className="py-2 px-4 border border-red-500 mt-20 text-lg font-medium bg-white text-red-500 rounded-md transition-transform transform hover:scale-105 w-200 mx-4"
-              onClick=""
+              onClick={handleBuyNow}
             >
               Buy Now
             </button>
