@@ -7,14 +7,12 @@ const Product = ({ product: { image, name, slug, price, rating } }) => {
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
-        <div className="cursor-pointer transform scale-100 transition-transform ease duration-500 text-gray-800">
-          <img
-            src={urlFor(image && image[0])}
-            className="product-detail-image"
-          />
-          <p className="product-name">{name}</p>
-          <p className="product-price">£{price}</p>
-          <p className="product-rating">{rating}</p>
+        <div className="cursor-pointer transform scale-75 transition-transform ease duration-500 text-gray-800">
+          <img src={urlFor(image && image[0])} className="w-1/2" />
+
+          <p className="font-medium">{name}</p>
+          <p className="font-extrabold mt-6 text-black">£{price}</p>
+          <p className="font-medium">{rating}</p>
         </div>
       </Link>
     </div>

@@ -15,21 +15,24 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="success-wrapper">
-      <div className="success">
-        <p className="icon">
-          <BsBagCheckFill />
+    <div className="min-h-69vh">
+      <div className="h-350 p-40">
+        <h2 className="text-center">Thank you for your order!</h2>
+        <p className="text-16 font-semibold text-center">
+          Check your email inbox for the confirmation.
         </p>
-        <h2>Thank you for your order!</h2>
-        <p className="email-msg">Check your email inbox for the receipt.</p>
-        <p className="description">
-          If you have any questions, please email
-          <a className="email" href="mailto:order@example.com">
+        <p className="text-16 font-semibold text-center my-10 mt-30">
+          If you have any questions, please email <br />
+          <a className="email" href="mailto:freshaire@example.com">
             order@example.com
           </a>
         </p>
         <Link href="/">
-          <button type="button" width="300px" className="btn">
+          <button
+            type="button"
+            width="300px"
+            className="w-full max-w-400 px-12 py-10 rounded-15 border-none text-20 mt-10 lg:mt-40 uppercase bg-f02d34 text-white cursor-pointer transform transition duration-500 ease-in-out hover:scale-105"
+          >
             Continue Shopping
           </button>
         </Link>

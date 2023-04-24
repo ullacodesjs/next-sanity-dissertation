@@ -9,8 +9,7 @@ const Home = ({ products }) => {
       <Banner />
       {/* 17 product card: text-center justify-center h-screen text-2xl */}
       <div>
-        <h2 className="text-center my-40">Latest Products</h2>
-        {/* <p className="py-3">New Season Designs For Every Home</p> */}
+        <h2 className="text-center my-40 font-bold ">Latest Products</h2>
       </div>
       <div className="py-3"></div>
       <div className="flex flex-wrap justify-center gap-15 mt-20 w-full cursor-pointer transform transition-transform ease duration-500 text-#324d67 hover:scale-110 rounded-15 bg-#ebebeb">
