@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <div>
       <h1>Contact Us</h1>
-      <p>Here is where you would put your privacy policy content...</p>
+      <p>mailto:freshaire@gmail.com</p>
     </div>
   );
 };
